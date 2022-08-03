@@ -115,7 +115,7 @@ df_clean.room_type.value_counts() / df_clean.shape[0]
 
 ```
 
-## Q6. Qual a localidade mais cara do/da cidade tal?
+## Q6. Qual a localidade mais cara da cidade tal?
 
 ```Python
 # Uma maneira de se verificar uma variável em função da outra é usando groupby().
