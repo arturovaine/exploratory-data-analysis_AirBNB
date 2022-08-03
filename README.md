@@ -75,7 +75,8 @@ df_clean.hist(bins=15, figsize=(15,10))
 # Correlação vs causalidade -> https://www.tylervigen.com/spurious-correlations
 # https://escoladedados.org/tutoriais/correlacao-nao-e-causalidade-mas-o-que-e-entao/
 
-# Correlação significa que existe uma relação entre duas coisas. No nosso contexto, estamos buscando relação ou semelhança entre duas variáveis.
+# Correlação significa que existe uma relação entre duas coisas.
+# Neste contexto, busca-se a relação ou semelhança entre duas variáveis.
 
 # Essa relação pode ser medida, e é função do coeficiente de correlação estabelecer qual a intensidade dela.
 # Para identificar as correlações existentes entre as variáveis de interesse, vou:
@@ -99,12 +100,14 @@ sns.heatmap(corr, cmap='RdBu', fmt='.2f', square=True, linecolor='white', annot=
 ```Python
 
 # A coluna da variável room_type indica o tipo de locação que está anunciada no Airbnb.
-# Se você já alugou no site, sabe que existem opções de apartamentos/casas inteiras, apenas o aluguel de um quarto ou mesmo dividir o quarto com outras pessoas.
-# Vamos contar a quantidade de ocorrências de cada tipo de aluguel, usando o método value_counts().
+# Se você já alugou no site, sabe que existem opções de apartamentos/casas inteiras,
+# apenas o aluguel de um quarto ou mesmo dividir o quarto com outras pessoas.
 
-# verificar maiores frequências -> qual o tipo de imóvel mais alugado no airbnb
-# verificar quantidade de cada tipo de imóvel disponível
-# verificar porcentagem de cada tipo de imóvel disponível
+# Contar a quantidade de ocorrências de cada tipo de aluguel, usando o método value_counts().
+
+# Verificar maiores frequências -> qual o tipo de imóvel mais alugado no airbnb
+# Verificar quantidade de cada tipo de imóvel disponível
+# Verificar porcentagem de cada tipo de imóvel disponível
 
 
 # mostrar a quantidade de cada tipo de imóvel disponível
@@ -123,7 +126,8 @@ df_clean.room_type.value_counts() / df_clean.shape[0]
 
 df_clean.groupby(['neighbourhood']).price.mean().sort_values(ascending=False)[:10]
 
-# verificar localidade (bairro?) mais cara da cidade -> df.groupby(...).price.mean().sort_values()
+# verificar localidade (bairro?) mais cara da cidade
+# -> df.groupby(...).price.mean().sort_values()
 # plotar os imóveis pela latitude-longitude
 
 df_clean.plot(kind="scatter", x='longitude', y='latitude', alpha=0.4, c=df_clean['price'], s=8,
