@@ -78,7 +78,8 @@ df_clean.hist(bins=15, figsize=(15,10))
 # Correlação significa que existe uma relação entre duas coisas.
 # Neste contexto, busca-se a relação ou semelhança entre duas variáveis.
 
-# Essa relação pode ser medida, e é função do coeficiente de correlação estabelecer qual a intensidade dela.
+# Essa relação pode ser medida, e é função do coeficiente de correlação estabelecer
+# qual a intensidade dela.
 # Para identificar as correlações existentes entre as variáveis de interesse, vou:
 
 # Criar uma matriz de correlação
